@@ -1,13 +1,16 @@
 import json
 import time
 import requests
+from funcy import project
 
 SCROLL     = "5m"
 LIMIT      = 10000
 URL        = "http://epfl.elasticsearch.spinn3r.com/content_*/_search?scroll=%s" % SCROLL
 URL_SCROLL = "http://epfl.elasticsearch.spinn3r.com/_search/scroll"
 TAG        = "coronavirus"
-OUT        = "/Volumes/JAY_DATA/coronavirus/%d.json"
+OUT        = "data/coronavirus/%d.json"
+
+fields     = ['source_handle','main','permalink','lang','source_followers','published']
 
 HEADERS = {
   'Content-Type': 'application/json',
@@ -29,8 +32,11 @@ cnt  = 0
 data = json.loads(response.text)
 hits = data['hits']
 output_data = hits['hits']
+format_data = []
+for o in output_data:
+    format_data.append(project(o['_source'],fields))
 with open(OUT % cnt,'w') as fout:
-    json.dump(output_data, fout)
+    json.dump(format_data, fout)
 
 total_downloaded = len(hits['hits'])
 print('Downloaded %d records' % total_downloaded)
@@ -52,8 +58,11 @@ while len(hits['hits']) > 0:
 
   hits = data['hits']
   output_data = hits['hits']
+  format_data = []
+  for o in output_data:
+      format_data.append(project(o['_source'],fields))
   with open(OUT % cnt,'w') as fout:
-    json.dump(output_data, fout)
+      json.dump(format_data, fout)
 
   total_downloaded += len(hits['hits'])
   print('Downloaded %d records' % total_downloaded)
