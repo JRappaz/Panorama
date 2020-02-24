@@ -2,15 +2,15 @@ import json
 import time
 import requests
 from funcy import project
-
+ 
 SCROLL     = "5m"
 LIMIT      = 10000
 URL        = "http://epfl.elasticsearch.spinn3r.com/content_*/_search?scroll=%s" % SCROLL
 URL_SCROLL = "http://epfl.elasticsearch.spinn3r.com/_search/scroll"
-TAG        = "coronavirus"
+TAG        = "((main:virus AND main:Wuhan)  OR main:coronavirus  OR main:nCoV_2019) AND source_publisher_subtype:twitter"
 OUT        = "data/coronavirus/%d.json"
 
-fields     = ['source_handle','main','permalink','lang','source_followers','published']
+fields     = ['author_handle','main','permalink','lang','source_followers', 'source_following','published', 'likes', 'shares', 'replied', 'shared_type']
 
 HEADERS = {
   'Content-Type': 'application/json',
@@ -49,7 +49,12 @@ while len(hits['hits']) > 0:
   data_post['scroll_id'] = scroll_id
   data_post['scroll']    = SCROLL
   data_post = json.dumps(data_post)
-  response = requests.post(URL_SCROLL, headers=HEADERS, data=data_post)
+  try:
+      response = requests.post(URL_SCROLL, headers=HEADERS, data=data_post)
+  except:
+      print("Broken connection, damn!")
+      continue 
+
   if not response.text:
       print("empty response")
       continue
