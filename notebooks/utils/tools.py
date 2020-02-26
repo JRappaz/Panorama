@@ -3,13 +3,14 @@ import os
 import json
 import pickle
 
-def aggregateTweets(DirPath, authorsFilter=None, columnsFilter=None, savePath=None):
+def aggregateTweets(DirPath, authorsFilter=None, authorsFilterKeep=True, columnsFilter=None, savePath=None):
     """
         Take the path of a directory containing json files produced with pump.py 
         and aggregate all tweets in a single dataFrame
 
         DirPath: The directory of the files to aggregate
         authorsFilter: the list of tweeter account to keep in the df, no filter if not mentionned
+        authorsFilterKeep: If true, keep only the tweets sent by authorsFilterList, if False keep all except the list
         columnsFilter: To reduce size if too much data, keep only columns mentionned here if not None
         savePath: the path of the final df, not saved if not mentionned 
     """
@@ -23,14 +24,19 @@ def aggregateTweets(DirPath, authorsFilter=None, columnsFilter=None, savePath=No
     all_files = list(os.listdir(DirPath))
 
     for i,f in enumerate(all_files):
+        if not f.endswith(".json"):
+            continue
         print 'Loading files %d/%d : %s\r'%(i+1,len(all_files), f),
         temp = pd.read_json(os.path.join(DirPath,f), orient="records")
 
         if authorsFilter is not None:
-            temp = temp[temp['author_handle'].isin(authorsFilter)]
+            if authorsFilterKeep:
+                temp = temp[temp['author_handle'].isin(authorsFilter)]
+            else:
+                temp = temp[~temp['author_handle'].isin(authorsFilter)]
 
         if columnsFilter is not None:
-            df = df[[columnsFilter]]
+            temp = temp[[columnsFilter]]
 
         df = pd.concat([df, temp])
             
