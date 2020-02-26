@@ -71,6 +71,3 @@ for i in range(NB_TWEETS//API_GET_LIMIT + 1):
 
 
 
-
-
-
