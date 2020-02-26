@@ -1,4 +1,7 @@
-
+import pandas as pd
+import os
+import json
+import pickle
 
 def aggregateTweets(DirPath, authorsFilter=None, columnsFilter=None, savePath=None):
 	"""
@@ -28,7 +31,7 @@ def aggregateTweets(DirPath, authorsFilter=None, columnsFilter=None, savePath=No
 
 	    if columnsFilter is not None:
 			df = df[[columnsFilter]]
-			
+
 	    df = pd.concat([df, temp])
 	        
 	print("Done!" + " "*30)

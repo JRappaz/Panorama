@@ -1,3 +1,9 @@
+import matplotlib.pyplot as plt
+from matplotlib.dates import DateFormatter
+import matplotlib.dates as mdates
+import seaborn as sns
+import pandas as pd
+
 def plotTweetPerDay(df, title, rolling_window=1, vertical_line_x=None, vertical_line_label=""):
     # Prettier plotting with seaborn
     sns.set(font_scale=1.5, style="whitegrid")
