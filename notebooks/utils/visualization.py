@@ -4,19 +4,19 @@ import matplotlib.dates as mdates
 import seaborn as sns
 import pandas as pd
 
-def plotTweetPerDay(df, title, rolling_window=1, vertical_line_x=None, vertical_line_label=""):
+def plotTweetPerDay(df, title, rolling_window=1, vertical_line_x=None, vertical_line_label="", col_count="published"):
     # Prettier plotting with seaborn
     sns.set(font_scale=1.5, style="whitegrid")
 
     fig, ax = plt.subplots(figsize=(12, 8))
 
     # Compute rolling mean of the count if needed
-    y =  df['published'].rolling(window=rolling_window).mean()
+    y =  df[col_count].rolling(window=rolling_window).mean()
 
     ax.plot(df['date'],
            y,
             '-o',
-            color='purple')
+            color='purple', marker="")
     ax.set(xlabel="Date", ylabel="# Tweets",
            title=title)
 

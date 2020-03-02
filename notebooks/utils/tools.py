@@ -2,6 +2,7 @@ import pandas as pd
 import os
 import json
 import pickle
+import re
 
 def aggregateTweets(DirPath, authorsFilter=None, authorsFilterKeep=True, columnsFilter=None, savePath=None):
     """
@@ -14,9 +15,9 @@ def aggregateTweets(DirPath, authorsFilter=None, authorsFilterKeep=True, columns
         columnsFilter: To reduce size if too much data, keep only columns mentionned here if not None
         savePath: the path of the final df, not saved if not mentionned 
     """
-    df = pd.DataFrame(columns=[u'author_handle', u'lang', u'likes', u'main', u'permalink',
-           u'published', u'replied', u'shared_type', u'shares',
-           u'source_followers', u'source_following'])
+    df = pd.DataFrame(columns=[u'author_handle', u'geo_location', u'lang', u'likes', u'main',
+       u'permalink', u'published', u'replied', u'shared_type', u'shares',
+       u'source_followers', u'source_following'])
 
     if columnsFilter is not None:
         df = df[[columnsFilter]]
@@ -51,19 +52,39 @@ def aggregateTweets(DirPath, authorsFilter=None, authorsFilterKeep=True, columns
 
 
 def countByDay(df, col_date):
-    """
-        Take a df and count the occurence of rows per day
+    """Count the occurence of rows per day in a dataframe
+    Parameters
+    ----------
+    df: Pandas Dataframe 
+        The df to group by day
+    col_date: string
+        the column name on which we group per day
 
-        df: the df to group by day
-        col_date: the column name on which we group per day
+    Returns
+    -------
+    A df with the count of occurence per day
     """
-    tweets_per_day = df.published.groupby([df[col_date].dt.year, df[col_date].dt.month, df[col_date].dt.day]).count()
+    tweets_per_day = df[col_date].groupby([df[col_date].dt.year, df[col_date].dt.month, df[col_date].dt.day]).count()
     tweets_per_day.index.names = ['Year', 'Month','Day']
     tweets_per_day = tweets_per_day.reset_index()
     tweets_per_day['date'] = pd.to_datetime(tweets_per_day[['Year', 'Month', 'Day']])
-    tweets_per_day = tweets_per_day[['date', 'published']]
+    tweets_per_day = tweets_per_day[['date', col_date]]
     return tweets_per_day
 
+def remove_url(txt):
+    """Replace URLs found in a text string with nothing
+
+    Parameters
+    ----------
+    txt : string
+        A text string that you want to parse and remove urls.
+
+    Returns
+    -------
+    The same txt string with url's removed.
+    """
+
+    return " ".join(re.sub("([^0-9A-Za-z \t])|(\w+:\/\/\S+)", "", txt).split())
 
 
 

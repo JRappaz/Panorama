@@ -7,10 +7,10 @@ SCROLL     = "5m"
 LIMIT      = 10000
 URL        = "http://epfl.elasticsearch.spinn3r.com/content_*/_search?scroll=%s" % SCROLL
 URL_SCROLL = "http://epfl.elasticsearch.spinn3r.com/_search/scroll"
-TAG        = "main:impeachment AND source_publisher_subtype:twitter"
-OUT        = "/mnt/datastore/data/impeachment/%d.json"
+TAG        = "((main:virus AND main:Wuhan)  OR main:coronavirus  OR main:nCoV_2019) AND source_publisher_subtype:twitter"
+OUT        = "/mnt/datastore/data/coronavirus/%d.json"
 
-fields     = ['author_handle','main','permalink','lang','source_followers', 'source_following','published', 'likes', 'shares', 'replied', 'shared_type']
+fields     = ['author_handle','main','permalink','geo_location' ,'lang','source_followers', 'source_following','published', 'likes', 'shares', 'replied', 'shared_type']
 
 HEADERS = {
   'Content-Type': 'application/json',
