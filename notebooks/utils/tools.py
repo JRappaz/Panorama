@@ -27,7 +27,7 @@ def aggregateTweets(DirPath, authorsFilter=None, authorsFilterKeep=True, columns
     for i,f in enumerate(all_files):
         if not f.endswith(".json"):
             continue
-        print 'Loading files %d/%d : %s\r'%(i+1,len(all_files), f),
+        print ('Loading files %d/%d : %s\r'%(i+1,len(all_files), f),end="")
         temp = pd.read_json(os.path.join(DirPath,f), orient="records")
 
         if authorsFilter is not None:
