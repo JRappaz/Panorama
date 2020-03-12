@@ -3,18 +3,22 @@ import time
 import requests
 from funcy import project
 
+def read_accounts(f): 
+    with open(f) as fin:
+        return [l.strip() for l in fin.readlines()]
+
 SCROLL     = "5m"
 LIMIT      = 10000
 URL        = "http://epfl.elasticsearch.spinn3r.com/content_*/_search?scroll=%s" % SCROLL
 URL_SCROLL = "http://epfl.elasticsearch.spinn3r.com/_search/scroll"
 
-ACCOUNTS   = ['nytimes', 'guardian']
+ACCOUNTS   = read_accounts("4imn_top50World_accounts.csv")
 FROM_DATE  = "2020-01-01"
 TO_DATE    = None
 
 TAG        = "source_publisher_subtype:twitter"
 
-OUT        = "/mnt/datastore/data/medias/%d.json"
+OUT        = "/mnt/datastore/data/medias/top_50_world/%d.json"
 
 fields     = ['author_handle','main','permalink','geo_location', 'geo_country', 'geo_state', 'geo_city' ,'lang','source_followers', 'source_following','published', 'likes', 'shares', 'replied', 'shared_type']
 
@@ -53,6 +57,7 @@ cnt  = 0
 
 data = json.loads(response.text)
 hits = data['hits']
+print("hits: ", hits['total'])
 output_data = hits['hits']
 format_data = []
 for o in output_data:
@@ -82,3 +87,20 @@ while len(hits['hits']) > 0:
       continue
 
   data = json.loads(response.text)
+
+  hits = data['hits']
+  output_data = hits['hits']
+  format_data = []
+  for o in output_data:
+      format_data.append(project(o['_source'],fields))
+  with open(OUT % cnt,'w') as fout:
+      json.dump(format_data, fout)
+
+  total_downloaded += len(hits['hits'])
+  print('Downloaded %d records' % total_downloaded)
+  if len(hits['hits']) == 0:
+      print("no more hits")
+      break
+
+print("Writing %d records to file" % total_downloaded)
+

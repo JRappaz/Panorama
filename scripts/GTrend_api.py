@@ -21,6 +21,6 @@ for country in countries:
 interest.index.name = 'date'    
 
 if APPEND_MODE: 
-    interest.to_csv('gtrend_by_country.csv', encoding='utf-8', mode='a', header=False)
+    interest.to_csv(OUTPUT_PATH, encoding='utf-8', mode='a', header=False)
 else:
-    interest.to_csv('gtrend_by_country.csv', encoding='utf-8')
+    interest.to_csv(OUTPUT_PATH, encoding='utf-8')
