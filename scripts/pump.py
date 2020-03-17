@@ -10,7 +10,7 @@ URL_SCROLL = "http://epfl.elasticsearch.spinn3r.com/_search/scroll"
 TAG        = "((main:virus AND main:Wuhan)  OR main:coronavirus  OR main:nCoV_2019) AND source_publisher_subtype:twitter"
 OUT        = "/mnt/datastore/data/coronavirus/%d.json"
 
-fields     = ['author_handle','main','permalink','geo_location', 'geo_country', 'geo_state', 'geo_city' ,'lang','source_followers', 'source_following','published', 'likes', 'shares', 'replied', 'shared_type']
+fields     = ['author_handle','main','permalink','geo_point', 'geo_location', 'geo_country', 'geo_state', 'geo_city' ,'lang','source_followers', 'source_following','published', 'likes', 'shares', 'replied', 'shared_type']
 
 HEADERS = {
   'Content-Type': 'application/json',

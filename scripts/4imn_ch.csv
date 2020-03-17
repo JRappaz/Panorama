@@ -1,0 +1,52 @@
+name,website,twitter,location
+ 20 Minuten,http://www.20min.ch,['https://twitter.com/20min'],Zürich
+ Neue Zürcher Zeitung,http://www.nzz.ch,"['https://www.twitter.com/nzz', 'https://twitter.com/nzz']",Zürich
+ Blick,http://www.blick.ch,[],Zürich
+ Tages-Anzeiger,http://www.tagesanzeiger.ch,[],Zürich
+ Le Temps,http://www.letemps.ch,['https://twitter.com/letemps'],Geneva
+ La Tribune de Genève,http://www.tdg.ch,['https://twitter.com/tdgch'],Geneve
+ 24 Heures,http://www.24heures.ch,['https://twitter.com/24heuresch'],Lausanne
+ Le Matin,http://www.lematin.ch,[],Lausanne
+ Basler Zeitung,https://www.bazonline.ch,[],Basel
+ Aargauer Zeitung,http://www.aargauerzeitung.ch,[],Aargau
+ St. Galler Tagblatt,https://www.tagblatt.ch,"['https://www.twitter.com/tagblatt_ch', 'https://twitter.com/tagblatt_ch']",St. Gallen
+ HandelsZeitung,http://www.handelszeitung.ch,"['https://twitter.com/Handelszeitung', 'https://twitter.com/bilanz']",Zürich
+ Neue Luzerner Zeitung,http://www.luzernerzeitung.ch,"['https://www.twitter.com/luzernerzeitung', 'https://twitter.com/LuzernerZeitung']",Luzern
+ Cash,http://www.cash.ch,['https://twitter.com/cashch'],Zürich
+ Die Weltwoche,http://www.weltwoche.ch,['https://twitter.com/weltwoche'],Zürich
+ Berner Zeitung,http://www.bernerzeitung.ch,"['https://twitter.com/bernerzeitung', 'https://twitter.com/share', 'https://twitter.com/24heuresch', 'https://twitter.com/tagesanzeiger', 'https://twitter.com/bazonline', 'https://twitter.com/derbund', 'https://twitter.com/landbote', 'https://twitter.com/tdgch', 'https://twitter.com/zszonline', 'https://twitter.com/zunterland']",Bern
+ Le Nouvelliste,http://www.lenouvelliste.ch,['https://twitter.com/lenouvelliste'],Sion
+ Corriere del Ticino,http://www.cdt.ch,['https://twitter.com/CdT_Online'],Lugano
+ Der Bund,http://www.derbund.ch,[],Bern
+ Le Courrier,https://lecourrier.ch,['https://twitter.com/lecourrier'],Geneve
+ L'Impartial et L'Express,http://www.arcinfo.ch,['https://twitter.com/arcinfo'],La Chaux de Fonds
+ Die Südostschweiz,http://www.suedostschweiz.ch,['https://twitter.com/suedostschweiz'],Chur
+ La Liberté,http://www.laliberte.ch,['https://twitter.com/LaLiberte'],Fribourg
+ L'Agefi,http://www.agefi.com,['https://twitter.com/Ageficom'],Lausanne
+ Die WochenZeitung,http://www.woz.ch,['https://twitter.com/Wochenzeitung'],Zürich
+ Finanz und Wirtschaft,http://www.fuw.ch,"['https://twitter.com/fuw_news', 'https://twitter.com/FuW_News']",Zürich
+ Der Landbote,http://www.landbote.ch,[],Winterthur
+ Schaffhauser Nachrichten,http://www.shn.ch,['https://www.twitter.com/SHN_News'],Schaffhausen
+ Bieler Tagblatt,http://www.bielertagblatt.ch,['https://twitter.com/bielertagblatt'],Biel
+ La Côte,http://www.lacote.ch,['https://twitter.com/lacotejournal'],Nyon
+ Basellandschaftliche Zeitung,https://www.bzbasel.ch,[],Liestal
+ La Regione Ticino,http://www.laregione.ch,['https://twitter.com/laregione'],Lugano
+ Zürichsee-Zeitung,http://www.zsz.ch,[],Stafa
+ Walliser Bote & Rhone Zeitung,http://www.1815.ch,['https://twitter.com/1815_online'],Brig
+ Zürcher Unterländer,http://www.zuonline.ch,[],Dielsdorf
+ Solothurner Zeitung,http://www.solothurnerzeitung.ch,[],Solothurn
+ Blick am Abend,http://www.blickamabend.ch,[],Zürich
+ Bote der Urschweiz,http://www.bote.ch,[],Schwyz
+ Journal du Jura,http://www.journaldujura.ch,['https://twitter.com/JournalduJura'],Biel
+ Oltner Tagblatt,http://www.oltnertagblatt.ch,[],Olten
+ Jungfrau Zeitung,http://www.jungfrauzeitung.ch,[],Interlaken
+ Giornale del Popolo,https://gdp.ch,['https://twitter.com/intent'],Lugano
+ Le Quotidien Jurassien,https://www.lqj.ch,[],Delemont
+ Zofinger Tagblatt,http://zofingertagblatt.ch,['https://twitter.com/zt_info'],Zofingen
+ Wochen Zeitung,http://www.wochen-zeitung.ch,[],Langnau
+ Rheintalische Volkszeitung,http://rheintaler.ch,['https://twitter.com/Rheintalonline'],Alstatten
+ Urner Wochenblatt,http://www.urnerwochenblatt.ch,['https://twitter.com/_wochenblatt'],Altdorf
+ Engadiner Post,http://www.engadinerpost.ch,['https://twitter.com/engadinerpost'],St. Moritz
+ Sempacher Woche,http://www.sempacherwoche.ch,['https://twitter.com/sempacherwoche'],Sempach
+ March Anzeiger und Höfner Volksblatt,http://www.hoefner.ch,['https://twitter.com/HoefnerVolks'],Lachen
+

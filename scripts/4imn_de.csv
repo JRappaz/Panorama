@@ -1,0 +1,52 @@
+name,website,twitter,location
+ Bild,http://www.bild.de,"['https://twitter.com/BILD', 'https://twitter.com/bild']",Hamburg
+ Die Welt,http://www.welt.de,['https://twitter.com/welt'],Berlin
+ Die Zeit,http://www.zeit.de,['https://twitter.com/zeitonline'],Hamburg
+ Süddeutsche Zeitung,http://www.sueddeutsche.de,"['https://twitter.com/SZ', 'https://twitter.com/sz']",München
+ Frankfurter Allgemeine Zeitung,http://www.faz.net,['https://twitter.com/faznet'],Frankfurt am Main
+ Der Tagesspiegel,http://www.tagesspiegel.de,['https://twitter.com/tagesspiegel'],Berlin
+ Handelsblatt,http://www.handelsblatt.com,['https://twitter.com/handelsblatt'],Düsseldorf
+ Die Tageszeitung,https://taz.de,['https://twitter.com/tazgezwitscher'],Berlin
+ Rheinische Post,https://rp-online.de,['https://twitter.com/rponline'],Düsseldorf
+ Berliner Morgenpost,http://www.morgenpost.de,['https://twitter.com/morgenpost'],Berlin
+ Hamburger Abendblatt,http://www.abendblatt.de,[],Hamburg
+ Münchner Merkur,http://www.merkur.de,['https://twitter.com/merkur_de'],München
+ Augsburger Allgemeine Zeitung,http://www.augsburger-allgemeine.de,[],Augsburg
+ Frankfurter Rundschau,http://www.fr.de,[],Frankfurt am Main
+ Stuttgarter Zeitung,http://www.stuttgarter-zeitung.de,['https://twitter.com/StZ_NEWS'],Stuttgart
+ Badische Zeitung,http://www.badische-zeitung.de,[],Freiburg
+ Kölner Stadt-Anzeiger,http://www.ksta.de,['https://twitter.com/ksta_koeln'],Köln
+ Express,http://www.express.de,['https://twitter.com/express24'],Köln
+ TZ,http://www.tz.de,[],München
+ B.Z.,http://www.bz-berlin.de,"['https://twitter.com/nataschaochsenk', 'https://twitter.com/hashtag', 'https://twitter.com/fcunion', 'https://twitter.com/HerthaBSC', 'https://twitter.com/bzberlin']",Berlin
+ Berliner Zeitung,http://www.berliner-zeitung.de,['https://twitter.com/berlinerzeitung'],Berlin
+ Hannoversche Allgemeine Zeitung,http://www.haz.de,"['https://twitter.com/HAZ', 'https://twitter.com/intent']",Hannover
+ Hessisch-Niedersächsische Allgemeine,http://www.hna.de,[],Kassel
+ Hamburger Morgenpost,http://www.mopo.de,['https://twitter.com/mopo'],Hamburg
+ Stuttgarter Nachrichten,http://www.stuttgarter-nachrichten.de,['https://twitter.com/StN_NEWS'],Stuttgart
+ Schleswig-Holsteinischer Zeitungsverlag,http://www.shz.de,['https://twitter.com/intent'],Flensburg
+ Bremer Nachrichten,http://www.weser-kurier.de,['https://twitter.com/weserkurier'],Bremen
+ Sächsische Zeitung,https://www.saechsische.de,[],Dresden
+ Abendzeitung,http://www.abendzeitung-muenchen.de,['https://twitter.com/abendzeitung'],München
+ Südkurier,http://www.suedkurier.de,[],Konstanz
+ Neue Westfälische,http://www.nw.de,['https://twitter.com/nwnews'],Bielefeld
+ Südwest Presse,http://www.swp.de,[],Ulm
+ Freie Presse,http://www.freiepresse.de,['http://twitter.com/freie_presse'],Chemnitz
+ Nordwest-Zeitung,http://www.nwzonline.de,['https://twitter.com/nwzonline'],Oldenburg
+ Mitteldeutsche Zeitung,http://www.mz-web.de,['https://twitter.com/mzwebde'],Halle
+ Passauer Neue Presse,http://www.pnp.de,['https://twitter.com/pnp'],Passau
+ Schwäbische Zeitung,http://www.schwaebische.de,"['https://twitter.com/schwaebische', 'https://twitter.com/SZ_Ravensburg', 'https://twitter.com/SZ_Biberach', 'https://twitter.com/SZ_Allgaeu', 'https://twitter.com/SZ_AlbDonauUlm', 'https://twitter.com/SZ_Bodensee', 'https://twitter.com/SZ_Ostalb', 'https://twitter.com/SZ_Tuttlingen', 'https://twitter.com/SZ_Sigmaringen']",Leutkirch
+ Mittelbayerische Zeitung,http://www.mittelbayerische.de,['https://twitter.com/mz_de'],Regensburg
+ Leipziger Volkszeitung,http://www.lvz.de,"['https://twitter.com/LVZ', 'https://twitter.com/intent']",Leipzig
+ Main-Post,http://www.mainpost.de,['https://twitter.com/mainpost'],Würzburg
+ Rhein-Zeitung,http://www.rhein-zeitung.de,['https://twitter.com/RheinZeitung'],Koblenz
+ Ruhr-Nachrichten,http://www.ruhrnachrichten.de,[],Dortmund
+ Kieler Nachrichten,http://www.kn-online.de,"['https://twitter.com/kn_online', 'https://twitter.com/intent']",Kiel
+ Neues Deutschland,http://www.neues-deutschland.de,[],Berlin
+ Mannheimer Morgen,http://www.morgenweb.de,"['https://twitter.com/online_mm', 'https://twitter.com/ILMAmagazin']",Mannheim
+ Westfälische Nachrichten,http://www.wn.de,"['https://twitter.com/WN_Redaktion', 'https://twitter.com/wn_redaktion']",Münster
+ General-Anzeiger,http://www.general-anzeiger-bonn.de,['https://twitter.com/gabonn'],Bonn
+ Märkische Allgemeine,http://www.maz-online.de,"['https://twitter.com/maz_online', 'https://twitter.com/intent']",Potsdam
+ Rhein-Neckar-Zeitung,http://www.rnz.de,[],Heidelberg
+ Lausitzer Rundschau,http://www.lr-online.de,['https://twitter.com/lr_online'],Cottbus
+
