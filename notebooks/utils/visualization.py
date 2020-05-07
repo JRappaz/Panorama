@@ -4,7 +4,7 @@ import matplotlib.dates as mdates
 import seaborn as sns
 import pandas as pd
 
-def plotTweetPerDay(df, title, rolling_window=1, vertical_line_x=None, vertical_line_label="", col_count="published"):
+def plotTweetPerDay(df, title, rolling_window=1, vertical_line_x=None, vertical_line_label="", col_count="published", interval=2):
     # Prettier plotting with seaborn
     sns.set(font_scale=1.5, style="whitegrid")
 
@@ -25,11 +25,11 @@ def plotTweetPerDay(df, title, rolling_window=1, vertical_line_x=None, vertical_
         plt.axvline(linewidth=4, color='r', x=vertical_line_x, label=vertical_line_label)
     
     # Format the x axis
-    ax.xaxis.set_major_locator(mdates.WeekdayLocator(interval=2))
+    ax.xaxis.set_major_locator(mdates.WeekdayLocator(interval=interval))
     ax.xaxis.set_major_formatter(DateFormatter("%d-%m-%y"))
 
     # Ensure ticks fall once every other week (interval=2) 
-    ax.xaxis.set_major_locator(mdates.WeekdayLocator(interval=1))
+    ax.xaxis.set_major_locator(mdates.WeekdayLocator(interval=interval))
     plt.legend()
     plt.show()
 
