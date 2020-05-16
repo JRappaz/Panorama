@@ -6,14 +6,25 @@ from networkx.readwrite import json_graph
 import json
 import pickle
 import os
+from urllib3.exceptions import ProtocolError
 
 
 OUTPUT_FILE = "graph.json"
 IDS_FILE = "seeds_ids_filtered.txt"
+APPEND = True
+
+def readGraph():
+    with open(OUTPUT_FILE) as f:
+        js_graph = json.load(f)
+    return json_graph.node_link_graph(js_graph)
 
 class StdOutListener(StreamListener):
     count = 0
-    graph = nx.DiGraph()
+
+    if APPEND:
+        graph = readGraph()
+    else:
+        graph = nx.DiGraph()
 
     def saveGraph(self):
         json_ = json_graph.node_link_data(self.graph)
@@ -93,5 +104,9 @@ auth.set_access_token(access_token, access_token_secret)
 stream = Stream(auth, l, tweet_mode= 'extended')
 
 print("Following {} users".format(len(users)))
-stream.filter(follow=users, languages=["fr"])
-
+while True:
+    try:
+        stream.filter(follow=users, languages=["fr"])
+    except (ProtocolError, AttributeError):
+        print("\nProtocol or Attribute Error")
+        continue
