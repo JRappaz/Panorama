@@ -36,15 +36,34 @@ The results of this study resulted in an newspaper [article](https://labs.letemp
 This first part was also completed by a spatial approach in the Data Visualization course, where the goal was to relate COVID-19's spatial distribution with population reaction, defined here by the amount of information on both social networks (i.e. Twitter) and search engines (i.e. Google Trend). You can see the result on [this web app](https://com-480-data-visualization.github.io/com-480-project-coronateam/).
 
 ## Twitter interactions and Covid-19 conspirators
+![graph](figures/graph.png)
 
-### Data mining
+In the second part of this project we aimed to take a look into some communities of conspirators that use the covid-19 pandemic to expand themself and spread their messages.
+In this spirit we started to developp a tool to track interactions between people on twitter. The implementation of the tool is not done yet but you can take a look on what we achieved so far [here](https://fanfou02.github.io/twitter-interactions-graph/) and see the code on [this repo](https://github.com/Fanfou02/twitter-interactions-graph).
 
-### Data processing
+### How it's work
+The principle is simple, from a keyword or a hashtag, we retrieve all tweets corresponding to this keyword on twitter. With this tweet list, we can then build an interaction graph and apply some well known algorithms to retrieve important users/tweet and better understand the communities that use this keyword.
 
-### Data vizualisation 
+### Interactions 
+All users are represented by a node
+
+### Identifying important users & tweets
+
+### Node sampling
+
+### Community detection
 
 ## Workspace 
 - `scripts` : scripts used to mine all the data needed in this project 
 - `notebooks` : jupyter notebooks used to process and vizualize the data mined
 - `data`: contains a small amount of seeds lists used to filter our data mining tools, the datasets mined are stored on a external disk
 - `figures`: some of the vizualisations produced in this project
+
+
+## Credits
+
+> Author: François Quellec
+
+> Professor: Karl Aberer
+
+> Doctorant: Jérémie Rappaz 
