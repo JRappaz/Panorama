@@ -45,11 +45,21 @@ In this spirit we started to developp a tool to track interactions between peopl
 The principle is simple, from a keyword or a hashtag, we retrieve all tweets corresponding to this keyword on twitter. With this tweet list, we can then build an interaction graph and apply some well known algorithms to retrieve important users/tweet and better understand the communities that use this keyword.
 
 ### Interactions 
-All users are represented by a node
+All users are represented by a node and when an interaction happens between two nodes we add an edge or update the weight of an existing edge. But what is an interaction ? We define them as follow: 
+- an user mention another user
+- an user retweet another user
+- an user reply to another user
+In some cases, we might consider only the retweets to focus on the actors who have a more important role in disseminating information.
 
 ### Identifying important users & tweets
+Building an interaction graph allows us to play with some of the algorithms of graph theory in order to get an insight into our communities.
+If we consider our nodes as web pages from which users can retrieve information, we can apply some well-known algorithms to measure the importance of the node, in our case hits and PageRank. These algorithms fit perfectly with our representation of interactions on Twitter and allow us to retrieve the actors who propagate the most information about the chosen keyword in the Twitter community. An example with the keyword "chloroquine" is presented below (only French tweets):
+
+![hits](figures/HubsAuthorities.png)
 
 ### Node sampling
+
+Depending on our chosen keyword, the resulting number of tweets can be enormous, in order to better represent the information and retains 
 
 ### Community detection
 
