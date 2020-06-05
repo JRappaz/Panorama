@@ -2,7 +2,7 @@
 
 In this research project, started at the same time as the coronavirus crisis, we are interested in the different impacts of the pandemic on the internet's flow of information. Whether in the medias or on social networks, covid-19 has generated an astronomical amount of information exchange in the world, the analysis of these data could allow us to better understand the reaction of some actors in this infodemic.
 
-This project was carried out in collaboration with the newspaper "letemps.ch" with the aim of writing a series of articles on this infodemia.
+This project was carried out in collaboration with the newspaper "letemps.ch" with the aim of writing a series of articles on this infodemia, one of them is available [here](https://labs.letemps.ch/interactive/2020/covid-trends/)
 
 ## Problematic
 As the pandemic spreads around the world and population containment accelerates, social networks and search engines provide a window for people to learn and share about the virus. Mediatization of the pandemic shapes population's reaction to the virus, providing a support to rapidly share good practices about virus prevention but also a support for fake news spreading which could increase population anxiety. In this project we will mainly focus on two subjects, quantifying the information flows about covid-19 and designing a tool to track and vizualise the communities on twitter.
@@ -51,7 +51,7 @@ All users are represented by a node and when an interaction happens between two 
 - an user reply to another user
 In some cases, we might consider only the retweets to focus on the actors who have a more important role in disseminating information.
 
-### Identifying important users & tweets
+### Identifying important users
 Building an interaction graph allows us to play with some of the algorithms of graph theory in order to get an insight into our communities.
 If we consider our nodes as web pages from which users can retrieve information, we can apply some well-known algorithms to measure the importance of the node, in our case hits and PageRank. These algorithms fit perfectly with our representation of interactions on Twitter and allow us to retrieve the actors who propagate the most information about the chosen keyword in the Twitter community. An example with the keyword "chloroquine" is presented below (only French tweets):
 
@@ -59,9 +59,20 @@ If we consider our nodes as web pages from which users can retrieve information,
 
 ### Node sampling
 
-Depending on our chosen keyword, the resulting number of tweets can be enormous, in order to better represent the information and retains 
+Depending on our chosen keyword, the resulting number of tweets can be enormous, in order to better represent the information we might need to reduce the number of nodes. 
+To do so we use the very nice library [little ball of fur](https://little-ball-of-fur.readthedocs.io/en/latest/notes/introduction.html) and the PageRank algorithm to select important nodes.
+
+### Tracking important tweets
+
+In order to understand the trends for a specific keyword and identify which tweets are the starting point for these trends, we designed an interactive graph to visualize the volume of tweets and the tweets themselves. We can select a particular date range to filter the results. More filters are under development. 
+
+![activity screen](figures/activity_screen.png)
 
 ### Community detection
+An important feature would be to discover the communities in the population using the chosen keyword. This is not yet done but with the graphical representation and the [networkx] library (https://networkx.github.io/), it is quite easy to apply community detection algorithms such as k-Click, Label propagation and much more.
+
+### Future work
+As we said before, the tool is not finished at all but it already allows us to have a good overview of the different actors participating in a specific topic on twitter, we will continue to develop this tool during the summer and possibly another semester project in September.
 
 ## Workspace 
 - `scripts` : scripts used to mine all the data needed in this project 
